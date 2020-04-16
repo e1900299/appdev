@@ -38,7 +38,17 @@ what command-line argumenrs can be given and what do they mean.
 		screen.c	contains screen manipulation functions
 		screen.h	contains constant definitions and function declarations
 					of screen.c
-
+		comm.c		contains the code to post and respond to a speccific 
+					php server or website 
+		comm.h		contains constant definitions and function declerations
+					at comm.c
+		makefile	contains the shorter version for the gcc and others command
+					such ass rm and tar
+		testcurl.c	contains the code which can send information to specidic
+					php page
+		testscreen.c	contains a lot of animations and fuction that we can play 
+						and manipulate it alongside with screen.c
+		
 		...
 
 5. Copyright
