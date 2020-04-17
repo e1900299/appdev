@@ -8,10 +8,16 @@ WAVheader readwavhdr(FILE *fp){
 	return myh;
 }
 
-void displaywavhdr(WAVheader h){
+void displaywavhdr (WAVheader h){
 	for(int i=0; i<4; i++)
-		printf("%c", h.chunkID[i]);
+		printf("%C", h.chunkID[i]);
 	printf("\n");
-	printf(" Chunk size: %d\n", h.chunkSize);
+	printf("Chunk size: %d\n", h.chunkSize);
+	printf("Number of Channels: %d\n", h.numChannels);
+	printf("Sample rate: %d\n", h.sampleRate);
+	printf("Bits per sample: %d\n", h.bitsPerSample);
 	// -- to be continued
+	double duration;
+	duration =(double) h.subchunk2Size/h.byteRate;
+	printf("Duration: %f seconds\n", duration);
 }
