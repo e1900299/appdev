@@ -24,7 +24,7 @@ typedef struct{
 
 //function declarations
 #define UNICODE	// for conditional compilation
-#define BAR "\u2588"
+
 void setfgcolor(int);
 void setbgcolor(int);
 void setcolors(int, int);

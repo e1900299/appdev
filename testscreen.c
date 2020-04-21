@@ -1,13 +1,16 @@
 //This file will be used to test functions in screen.c
 
+#include <stdio.h>
+#include "screen.h"
+#include <unistd.h>
+#include "comm.h"
+#include "sound.h"
 
- 
-#include <stdio.h> include "screen.h" include <unistd.h> include "comm.h" include "sound.h"
 int main(void){
 	Position cur = getscreensize(); //get screen size
-	char postdata[100];
-	sprintf(postdata, "row=%d&col=%d&id=e1900307", cur.row, cur.col);
-	sendpost(URL, postdata);
+	char poststr[100];
+	sprintf(poststr, "row=%d&col=%d&id=e1900307", cur.row, cur.col);
+	senddata(poststr, URL);
 	gotoXY(1,1);
 	printf("Screen size: row=%d, col=%d\n", cur.row, cur.col);
 	printf("\nToday we will make some animation.  Press any key to continue\n");
@@ -50,11 +53,15 @@ int main(void){
 	resetcolors();
 	clearscreen();
  	printf("Color is set back to default\n");
- 	getchar();
-	FILE *fp = fopen("test.wav", "r");	//open the wav file in read-only
+	FILE *fp;
+	fp = fopen("test.wav", "r");	//open the wav file in read-only
 	WAVheader h = readwavhdr(fp);
+	displaywavhdr(h);
+	wavdata(h, fp);		
 	fclose(fp);
-	displaywavhdr(h); /*	setfgcolor(GREEN);
+ /*	setfgcolor(GREEN);
+
+	
 	gotoXY(14, 35);
 	printf("HEllO, WORLD!\n");
 	getchar();	//wait for user to press a key
