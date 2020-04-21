@@ -60,10 +60,10 @@ void wavdata(WAVheader h, FILE *fp){
 		gotoXY(1,1);
 		setfgcolor(CYAN);
 		printf("Sample rate: %d\n", SAMPLERATE);
-		gotoXY(1,75);
+		gotoXY(1,65);
 		setfgcolor(MAGENTA);
 		printf("Duration: %.2f s\n",(double) h.subchunk2Size/h.byteRate);
-		gotoXY(1,150);
+		gotoXY(1,135);
 		setfgcolor(YELLOW);
 		printf("Peaks: %d\n", peaks);
 #endif
