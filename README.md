@@ -57,3 +57,4 @@ what command-line argumenrs can be given and what do they mean.
 
 5. Copyright
 	This application follows GPLv2 copyright.
+6. Contact information Email: phuongduy30898@gmail.com 
