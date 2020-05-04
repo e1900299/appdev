@@ -34,22 +34,26 @@ what command-line argumenrs can be given and what do they mean.
 	. We should list all the files of this application at here with short descriptions.
 	. Example:
 	 _ List of files :
-		README.md	this filed.
-		screen.c	contains screen manipulation functions
-		screen.h	contains constant definitions and function declarations
-					of screen.c
-		comm.c		contains the code to post and respond to a speccific 
-					php server or website 
-		comm.h		contains constant definitions and function declerations
-					at comm.c
-		makefile	contains the shorter version for the gcc and others command
-					such ass rm and tar
-		testcurl.c	contains the code which can send information to specidic
-					php page
+		README.md	    this filed.
+		screen.c	    contains screen manipulation functions
+		screen.h	    contains constant definitions and function declarations
+					    of screen.c
+		comm.c		    contains the code to post and respond to a speccific 
+					    php server or website 
+		comm.h		    contains constant definitions and function declerations
+					    at comm.c
+		makefile	    contains the shorter version for the gcc and others command
+					    such ass rm and tar
+		testcurl.c	    contains the code which can send information to specidic
+					    php page
 		testscreen.c	contains a lot of animations and fuction that we can play 
 						and manipulate it alongside with screen.c
+		appdev.php      contains the code to read and write the post data from the main.c 
+                        and make the putty file to store data.
+		main.c          contains necessary code to run and test the function in sound.c.
+		sound.h         contains constant definitions and function declarations of sound.c. 
+		sound.c         contains functions that read .wav file.
 		
-		...
 
 5. Copyright
 	This application follows GPLv2 copyright.

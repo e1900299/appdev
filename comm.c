@@ -4,7 +4,7 @@
 
 // this module contains all the functions for client-server communications, we only use libcurl, you need to put "-lcurl" in linking command.
 
-void senddata(char *postdata, char *url){
+void sendpost(char *postdata, char *url){
 	CURL *curl;
 	CURLcode res;
 
